@@ -70,3 +70,7 @@ yarn-error.log
 
 # JetBrains
 .idea
+
+# Project Specific
+/src/examples
+/components/SimpleHero.js

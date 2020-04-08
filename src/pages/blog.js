@@ -1,10 +1,25 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from 'react'
+import {graphql} from 'gatsby'
 
-const Blog = () => (
+import Layout from '../components/Layout'
+import StyledHero from '../components/StyledHero'
+
+const Blog = ({data}) => (
   <Layout>
-    Hello Blog!
+    <StyledHero img={data.blogBG.childImageSharp.fluid} />
   </Layout>
 )
+
+export const query = graphql`
+	query {
+		blogBG:file(relativePath:{eq:"blogBcg.jpeg"}){
+			childImageSharp{
+				fluid(quality:90, maxWidth: 4160){
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
+	}
+`
 
 export default Blog
