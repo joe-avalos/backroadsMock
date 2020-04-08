@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import {FaCopyright} from 'react-icons/fa'
 
 import styles from '../css/footer.module.css'
@@ -10,7 +10,7 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.links}>
       {links.map((item,idx)=>(
-        <Link to={item.path} key={idx}>{item.text}</Link>
+        <AniLink fade to={item.path} key={idx}>{item.text}</AniLink>
       ))}
     </div>
     <div className={styles.icons}>
