@@ -8,7 +8,7 @@ import styles from '../../css/items.module.css'
 
 const getFeaturedTours = graphql`
 	query{
-		featuredTours:allContentfulTour(filter:{boolean:{eq:true}}){
+		featuredTours:allContentfulTour(filter:{featured:{eq:true}}){
 			edges{
 				node{
 					contentful_id
