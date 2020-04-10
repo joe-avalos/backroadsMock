@@ -5,6 +5,7 @@ import { FaMoneyBillWave, FaMap } from 'react-icons/fa'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import StyledHero from '../components/StyledHero'
 import Day from '../components/SingleTour/Day'
 import styles from '../css/template.module.css'
@@ -14,6 +15,7 @@ const TourTemplate = ({ data }) => {
   const { name, price, country, days, start, description: { description }, images, journey } = data.tour
   const [mainImg, ...tourImgs] = images
   return <Layout>
+    <SEO title={name} />
     <StyledHero img={mainImg.fluid}/>
     <section className={styles.template}>
       <div className={styles.center}>

@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import BlogCard from '../components/Blog/BlogCard'
 import Title from '../components/Title'
 import styles from '../css/blog.module.css'
@@ -15,6 +16,7 @@ const BlogListTemplate = (props) => {
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   return <Layout>
+    <SEO title={'Blogs'} description={'Alternate blog list with pagination'} />
     <section className={styles.blog}>
       <Title title={'latest'} subtitle={'posts'}/>
       <div className={styles.center}>

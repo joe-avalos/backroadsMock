@@ -13,6 +13,9 @@ module.exports = {
     title: `BackRoads`,
     description: `Explore awesome worldwide tours & discover what makes them unique. Forget your daily routine & say yes to adventure.`,
     author: `joe-avalos`,
+    twitterUsername: `John Doe`,
+    image: `/defaultBcg.jpeg`,
+    siteUrl: `https://mockbackroadsjbaa.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -21,6 +24,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

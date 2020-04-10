@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import styles from '../css/single-blog.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import StyledHero from '../components/StyledHero'
@@ -21,22 +22,17 @@ const BlogTemplate = ({data}) => {
       'embedded-entry-block':(node)=>{
         const {title, image, text} = node.data.target.fields
         return <div>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          <br/><br/><br/><br/>
           <h1>Related post: {title['en-US']}</h1>
           <img width="400" src={image['en-US'].fields.file['en-US'].url} alt="other post"/>
           {documentToReactComponents(text['en-US'])}
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          <br/><br/><br/><br/>
         </div>
       },
     }
   }
   return<Layout>
+    <SEO title={title} />
     <StyledHero img={image.fluid} />
     <section className={styles.blog}>
       <div className={styles.center}>

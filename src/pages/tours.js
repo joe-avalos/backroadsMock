@@ -2,11 +2,13 @@ import React from 'react'
 import {graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import Tours from '../components/Tours/Tours'
 import StyledHero from '../components/StyledHero'
 
 const tours = ({data}) => (
   <Layout>
+    <SEO title={'Tours'} />
     <StyledHero img={data.defaultBG.childImageSharp.fluid} />
     <Tours />
   </Layout>
