@@ -40,5 +40,13 @@ module.exports = {
         accessToken: process.env.CONTENFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://mockbackroadsjbaa.netlify.com`,
+        sitemap: `https://mockbackroadsjbaa.netlify.com/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
   ],
 }
